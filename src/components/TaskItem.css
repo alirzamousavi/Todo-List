@@ -1,0 +1,64 @@
+.item {
+  width: 100%;
+  height: 60px;
+  background-color: var(--secondary-background-color);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.item::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background-color: var(--orange-background-color);
+  margin-right: 20px;
+}
+
+.item input {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  accent-color: var(--grey-color);
+}
+
+.item label {
+  color: white;
+  font-size: 16pt;
+  margin-bottom: 3px;
+  user-select: none;
+  text-decoration: none;
+}
+
+.item.checked {
+  opacity: 0.55;
+}
+
+.item.checked label {
+  text-decoration: line-through;
+}
+
+.delete-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  color: var(--grey-color);
+}
+
+.delete-btn:hover {
+  color: var(--orange-background-color);
+}
+
+@media (max-width: 900px) {
+  .item label {
+    font-size: 14pt;
+  }
+}

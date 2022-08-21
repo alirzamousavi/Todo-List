@@ -1,0 +1,15 @@
+.filter-task {
+  width: 100%;
+  margin: 35px 0;
+}
+
+.filter-task input {
+  width: 100%;
+  height: 60px;
+  padding-left: 15px;
+  color: var(--secondary-text-color);
+}
+
+.filter-task input:focus {
+  color: var(--primary-text-color);
+}

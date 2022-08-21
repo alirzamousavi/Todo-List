@@ -1,0 +1,11 @@
+.tasks-list {
+  width: 100%;
+  height: fit-content;
+  margin: 50px 0;
+}
+
+.message {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: 16pt;
+}

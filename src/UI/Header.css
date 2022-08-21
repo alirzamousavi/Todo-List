@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url(../../src/fonts/Nunito/Nunito-ExtraBold.ttf);
+}
+h1 {
+  font-family: 'Nunito';
+  margin: 15px 0;
+  font-size: 50pt;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  user-select: none;
+}
