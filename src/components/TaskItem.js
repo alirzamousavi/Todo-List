@@ -4,6 +4,7 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const TaskItem = (props) => {
   const [isChecked, setIsChecked] = useState(props.checked);
+  const [isDeleted, setIsDeleted] = useState(false);
 
   // This function calls the onCheck method in parent component for changing the state of a task.
   const checkTaskHandler = () => {
@@ -18,11 +19,17 @@ const TaskItem = (props) => {
 
   // This function calls the onDelete method in parent component for deleting a task.
   const deleteTaskHandler = () => {
-    props.onDelete(props.id);
+    setIsDeleted(true);
+    setTimeout(() => {
+      props.onDelete(props.id);
+    }, 750);
   };
 
   return (
-    <div className={`item box ${isChecked ? "checked" : ""}`}>
+    <div
+      className={`item box ${isChecked ? "checked" : ""} 
+      ${isDeleted ? "deleted" : ""}`}
+    >
       <input
         onClick={checkTaskHandler}
         type="checkbox"

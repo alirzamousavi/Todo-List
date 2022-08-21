@@ -27,46 +27,46 @@
     -moz-transform: translateX(5px);
     -ms-transform: translateX(5px);
     -o-transform: translateX(5px);
-}
+  }
   20% {
     transform: translateX(-5px);
     -webkit-transform: translateX(-5px);
     -moz-transform: translateX(-5px);
     -ms-transform: translateX(-5px);
     -o-transform: translateX(-5px);
-}
+  }
   40% {
     transform: translateX(5px);
     -webkit-transform: translateX(5px);
     -moz-transform: translateX(5px);
     -ms-transform: translateX(5px);
     -o-transform: translateX(5px);
-}
+  }
   60% {
     transform: translateX(-5px);
     -webkit-transform: translateX(-5px);
     -moz-transform: translateX(-5px);
     -ms-transform: translateX(-5px);
     -o-transform: translateX(-5px);
-}
+  }
   80% {
     transform: translateX(5px);
     -webkit-transform: translateX(5px);
     -moz-transform: translateX(5px);
     -ms-transform: translateX(5px);
     -o-transform: translateX(5px);
-}
+  }
   100% {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
-}
+  }
 }
 
 .add-task button {
-  font-family: 'Poppins-light';
+  font-family: "Poppins-light";
   width: 20%;
   height: 60px;
   border: none;
@@ -85,7 +85,7 @@
 
 .add-task button::first-letter {
   font-size: 17pt;
-  font-family: 'Poppins-bold';
+  font-family: "Poppins-bold";
 }
 
 .add-task button:hover {
@@ -96,7 +96,8 @@
   .add-task {
     flex-direction: column;
   }
-  .add-task button, .add-task input {
+  .add-task button,
+  .add-task input {
     width: 100%;
-  } 
+  }
 }

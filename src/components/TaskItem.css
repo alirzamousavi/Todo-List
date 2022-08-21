@@ -21,6 +21,21 @@
   margin-right: 20px;
 }
 
+.item.deleted {
+  animation: delete 0.7s forwards ease-in;
+  -webkit-animation: delete 0.7s forwards ease-in;
+}
+
+@keyframes delete {
+  100% {
+    transform: translateX(-130%);
+    -webkit-transform: translateX(-130%);
+    -moz-transform: translateX(-130%);
+    -ms-transform: translateX(-130%);
+    -o-transform: translateX(-130%);
+  }
+}
+
 .item input {
   width: 20px;
   height: 20px;
