@@ -1,0 +1,18 @@
+:root {
+    --font-size-md: 14pt;
+    --font-size-lg: 16pt;
+    --font-size-xlg: 50pt;
+
+    --input-text-indent: 15px;
+
+    --element-height: 60px;
+
+    --element-border-radius: 10px;
+
+    --element-padding: 35px 0;
+
+    --element-margin: 10px 0;
+    --bullet-margin-right: 20px;
+    --checkbox-margin: 0 15px 0 20px;
+    --container-margin: 20px auto 40px;
+}

@@ -1,24 +1,24 @@
 .item {
   width: 100%;
-  height: 60px;
-  background-color: var(--secondary-background-color);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  height: var(--element-height);
+  background-color: var(--primary-darker-background-color);
+  border-top-right-radius: var(--element-border-radius);
+  border-bottom-right-radius: var(--element-border-radius);
   display: flex;
   align-items: center;
   position: relative;
 }
 
 .item:not(:last-child) {
-  margin-bottom: 15px;
+  margin: var(--element-margin);
 }
 
 .item::before {
   content: "";
   width: 6px;
   height: 100%;
-  background-color: var(--orange-background-color);
-  margin-right: 20px;
+  background-color: var(--secondary-background-color);
+  /* margin-right: var(--bullet-margin-right); */
 }
 
 .item.deleted {
@@ -39,14 +39,13 @@
 .item input {
   width: 20px;
   height: 20px;
-  margin-right: 15px;
-  accent-color: var(--grey-color);
+  margin: var(--checkbox-margin);
+  accent-color: var(--checkbox-color);
 }
 
 .item label {
-  color: white;
-  font-size: 16pt;
-  margin-bottom: 3px;
+  color: var(--primary-text-color);
+  font-size: var(--font-size-lg);
   user-select: none;
   text-decoration: none;
 }
@@ -65,15 +64,15 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
-  color: var(--grey-color);
+  color: var(--icon-color);
 }
 
 .delete-btn:hover {
-  color: var(--orange-background-color);
+  color: var(--icon-hover-color);
 }
 
 @media (max-width: 900px) {
   .item label {
-    font-size: 14pt;
+    font-size: var(--font-size-md);
   }
 }

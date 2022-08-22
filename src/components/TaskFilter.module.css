@@ -1,12 +1,11 @@
 .filter-task {
   width: 100%;
-  margin: 35px 0;
+  padding: var(--element-padding);
 }
 
 .filter-task input {
   width: 100%;
-  height: 60px;
-  padding-left: 15px;
+  padding-left: var(--input-text-indent);
   color: var(--secondary-text-color);
 }
 

@@ -1,9 +1,7 @@
 h1 {
   font-family: 'Nunito';
-  margin: 15px 0;
-  font-size: 50pt;
-  font-weight: 900;
-  color: white;
+  font-size: var(--font-size-xlg);
+  color: var(--primary-text-color);
   text-align: center;
   user-select: none;
 }

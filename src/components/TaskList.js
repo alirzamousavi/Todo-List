@@ -1,5 +1,5 @@
 import React from "react";
-import "./TaskList.css";
+import styles from "./TaskList.module.css";
 import TaskItem from "./TaskItem";
 
 const TaskList = (props) => {
@@ -15,7 +15,7 @@ const TaskList = (props) => {
     };
 
     return (
-      <div className="tasks-list">
+      <div className={styles["tasks-list"]}>
         {props.tasks.map((task) => {
           return (
             <TaskItem
@@ -32,8 +32,8 @@ const TaskList = (props) => {
     );
   } else {
     return (
-      <div className="tasks-list">
-        <p className="message">No task to show!</p>
+      <div className={styles["tasks-list"]}>
+        <p className={styles.message}>No task to show!</p>
       </div>
     );
   }

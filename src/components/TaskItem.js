@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./TaskItem.css";
+import styles from "./TaskItem.module.css";
+import boxStyles from "./BoxStyle.module.css";
 import { FaTrashAlt } from "react-icons/fa";
 
 const TaskItem = (props) => {
@@ -27,8 +28,8 @@ const TaskItem = (props) => {
 
   return (
     <div
-      className={`item box ${isChecked ? "checked" : ""} 
-      ${isDeleted ? "deleted" : ""}`}
+      className={`${styles.item} ${boxStyles.box} ${isChecked ? styles.checked : ""} 
+      ${isDeleted ? styles.deleted : ""}`}
     >
       <input
         onClick={checkTaskHandler}
@@ -37,7 +38,7 @@ const TaskItem = (props) => {
         id={`todo ${props.id}`}
       />
       <label htmlFor={`todo ${props.id}`}>{props.name}</label>
-      <FaTrashAlt onClick={deleteTaskHandler} className="delete-btn" />
+      <FaTrashAlt onClick={deleteTaskHandler} className={styles["delete-btn"]} />
     </div>
   );
 };

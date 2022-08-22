@@ -4,18 +4,18 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 20px;
-  padding-bottom: 35px;
-  border-bottom: 2px solid var(--grey-color);
+  padding: var(--element-padding);
+  border-bottom: 2px solid var(--seperator-color);
 }
 
 .add-task input {
   width: 80%;
-  padding-left: 15px;
+  padding-left: var(--input-text-indent);
   color: var(--secondary-text-color);
 }
 
 .add-task input.invalid {
-  outline: 2px solid var(--orange-background-color);
+  outline: 2px solid var(--secondary-background-color);
   animation: shake 0.5s forwards;
   -webkit-animation: shake 0.5s forwards;
 }
@@ -67,13 +67,14 @@
 
 .add-task button {
   font-family: "Poppins-light";
+  font-size: var(--font-size-md);
   width: 20%;
-  height: 60px;
+  height: var(--element-height);
   border: none;
-  border-radius: 12px;
-  font-size: 15pt;
+  border-radius: var(--element-border-radius);
+  font-size: var(--font-size-md);
   color: var(--primary-text-color);
-  background-color: var(--orange-background-color);
+  background-color: var(--secondary-background-color);
   opacity: 1;
   cursor: pointer;
   transition: opacity 0.4s;
@@ -81,21 +82,25 @@
   -webkit-transition: opacity 0.4s;
   -ms-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
+  -webkit-border-radius: var(--element-border-radius);
+  -moz-border-radius: var(--element-border-radius);
+  -ms-border-radius: var(--element-border-radius);
+  -o-border-radius: var(--element-border-radius);
 }
 
 .add-task button::first-letter {
-  font-size: 17pt;
   font-family: "Poppins-bold";
 }
 
 .add-task button:hover {
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 8px var(--shadow-color);
 }
 
 @media (max-width: 900px) {
   .add-task {
     flex-direction: column;
   }
+
   .add-task button,
   .add-task input {
     width: 100%;

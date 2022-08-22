@@ -1,5 +1,6 @@
 import React from "react";
-import "./TaskFilter.css";
+import styles from "./TaskFilter.module.css";
+import boxStyles from "./BoxStyle.module.css"
 
 const TaskFilter = (props) => {
   const inputChangeHandler = (event) => {
@@ -22,11 +23,11 @@ const TaskFilter = (props) => {
 
   return (
     <div>
-      <div className="filter-task">
+      <div className={styles["filter-task"]}>
         <input
           onChange={inputChangeHandler}
           type="text"
-          className="box"
+          className={boxStyles.box}
           placeholder="Pesquisar uma terfa"
         />
       </div>

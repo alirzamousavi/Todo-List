@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import "./AddNewTask.css";
-import "./BoxStyle.css";
+import styles from "./AddNewTask.module.css";
+import boxStyles from "./BoxStyle.module.css";
 
 const AddNewTask = (props) => {
   const taskName = useRef("");
@@ -47,11 +47,11 @@ const AddNewTask = (props) => {
   }
 
   return (
-    <form onSubmit={formSubmitHandler} className="add-task">
+    <form onSubmit={formSubmitHandler} className={styles["add-task"]}>
       <input
         type="text"
         ref={taskName}
-        className={`box ${isValid ? "" : "invalid"}`}
+        className={`${boxStyles.box} ${isValid ? "" : styles.invalid}`}
         placeholder="Nome da tarefa"
       />
       <button type="submit">+ Adicionar</button>

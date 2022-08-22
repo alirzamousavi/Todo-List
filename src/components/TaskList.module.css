@@ -1,0 +1,14 @@
+.tasks-list {
+  width: 100%;
+  height: fit-content;
+  padding: var(--element-padding);
+  padding-top: 0;
+  border-bottom: 2px solid var(--seperator-color);
+}
+
+.message {
+  color: var(--primary-text-color);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  user-select: none;
+}

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import Header from "./UI/Header";
 import AddNewTask from "./components/AddNewTask";
 import TaskOverview from "./components/TaskOverview";
@@ -81,7 +81,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <Header />
       <AddNewTask onAddTask={addTaskHandler} tasks={mainTasksList} />
       <TaskFilter onSearchList={searchListHandler} tasks={mainTasksList} />
