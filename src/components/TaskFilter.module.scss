@@ -1,0 +1,51 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+
+.filter-task {
+  width: 100%;
+  padding: $element-padding-lg;
+
+  input {
+    width: 100%;
+    padding-left: $input-text-indent-lg;
+    font-family: inherit;
+
+    &:not(:lang(fa)) {
+      padding-left: $input-text-indent-lg;
+    }
+    &:lang(fa) {
+      font-size: $font-size-lg;
+      padding-right: $input-text-indent-lg;
+    }
+
+    &.light {
+      color: $light-theme-secondary-text-color;
+      background-color: $light-theme-primary-light-background-color;
+
+      &:focus {
+        color: $light-theme-primary-text-color;
+        background-color: $light-theme-primary-lighter-background-color;
+      }
+    }
+
+    &.dark {
+      color: $dark-theme-secondary-text-color;
+      background-color: $dark-theme-primary-darker-background-color;
+
+      &:focus {
+        color: $dark-theme-primary-text-color;
+        background-color: $dark-theme-primary-dark-background-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .filter-task {
+    padding: $element-padding-sm;
+
+    input {
+      padding-left: $input-text-indent-md;
+    }
+  }
+}

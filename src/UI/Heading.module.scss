@@ -1,0 +1,17 @@
+@import "/src/asset/styles/colors";
+@import "/src/asset/styles/variables";
+
+h1 {
+  font-family: "Nunito";
+  font-size: $font-size-xlg;
+  text-align: center;
+  user-select: none;
+
+  &.light {
+    color: $light-theme-primary-text-color;
+  }
+
+  &.dark {
+    color: $dark-theme-primary-text-color;
+  }
+}

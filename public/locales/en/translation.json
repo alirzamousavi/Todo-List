@@ -1,0 +1,10 @@
+{
+  "heading": "Todolist",
+  "add_task_input": "New task's name",
+  "add_task_button": "Add task",
+  "search_task_input": "Search tasks",
+  "empty_tasks_list": "No task to show!",
+  "total_tasks_overview": "Total tasks",
+  "checked_tasks_overview": "Checked tasks",
+  "select_language_title": "Select language"
+}

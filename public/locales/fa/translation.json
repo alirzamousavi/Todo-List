@@ -1,0 +1,10 @@
+{
+  "heading": "Todolist",
+  "add_task_input": "نام تسک",
+  "add_task_button": "اضافه کردن",
+  "search_task_input": "جستجوی تسک",
+  "empty_tasks_list": "هیچ تسکی برای نمایش وجود ندارد!",
+  "total_tasks_overview": "تعداد کل تسک‌ها",
+  "checked_tasks_overview": "تعداد تسک‌های انجام شده",
+  "select_language_title": "زبان را انتخاب کنید"
+}
