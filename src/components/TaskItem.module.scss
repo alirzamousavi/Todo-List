@@ -1,0 +1,136 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+@import "../asset/styles/animations";
+
+.item {
+  width: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+
+  &:not(:last-child) {
+    margin: $element-margin;
+  }
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: $secondary-background-color;
+    position: absolute;
+  }
+
+  input {
+    width: 20px;
+    height: 20px;
+    margin: $checkbox-margin;
+
+    &.light {
+      accent-color: $light-theme-checkbox-color;
+    }
+
+    &.dark {
+      accent-color: $dark-theme-checkbox-color;
+    }
+  }
+
+  label {
+    width: 50%;
+    font-size: $font-size-lg;
+    user-select: none;
+    text-decoration: none;
+
+    @media (max-width: 900px) {
+      font-size: $font-size-md;
+    }
+
+    @media (max-width: 380px) {
+      font-size: $font-size-sm;
+    }
+  }
+
+  &.light {
+    background-color: $light-theme-primary-light-background-color;
+
+    label {
+      color: $light-theme-primary-text-color;
+    }
+
+    .delete-btn {
+      color: $light-theme-garbage-can-color;
+    }
+  }
+
+  &.dark {
+    background-color: $dark-theme-primary-darker-background-color;
+
+    label {
+      color: $dark-theme-primary-text-color;
+    }
+
+    .delete-btn {
+      color: $dark-theme-garbage-can-color;
+    }
+  }
+
+  &.checked {
+    opacity: 0.55;
+
+    label {
+      text-decoration: line-through;
+    }
+  }
+
+  .delete-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+
+    cursor: pointer;
+
+    &:hover {
+      color: $garbage-can-hover-color;
+    }
+  }
+
+  &:lang(fa) {
+    border-top-left-radius: $element-border-radius !important;
+    border-bottom-left-radius: $element-border-radius !important;
+
+    &::before {
+      right: 0;
+    }
+
+    .delete-btn {
+      left: 20px;
+    }
+
+    &.deleted {
+      animation: deleteFromRight 0.7s forwards ease-in;
+      -webkit-animation: deleteFromRight 0.7s forwards ease-in;
+    }
+  }
+
+  &:not(:lang(fa)) {
+    border-top-right-radius: $element-border-radius !important;
+    border-bottom-right-radius: $element-border-radius !important;
+
+    &::before {
+      left: 0;
+    }
+
+    .delete-btn {
+      right: 20px;
+    }
+
+    &.deleted {
+      animation: deleteFromLeft 0.7s forwards ease-in;
+      -webkit-animation: deleteFromLeft 0.7s forwards ease-in;
+    }
+  }
+}

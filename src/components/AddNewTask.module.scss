@@ -1,0 +1,124 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+@import "../asset/styles/animations";
+
+.add-task {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: $element-padding-lg;
+
+  &.light {
+    border-bottom: 2px solid $light-theme-seperator-color;
+  }
+
+  &.dark {
+    border-bottom: 2px solid $dark-theme-seperator-color;
+  }
+
+  input {
+    width: 80%;
+    outline: none;
+    font-family: inherit;
+
+    &:not(:lang(fa)) {
+      padding-left: $input-text-indent-lg;
+    }
+
+    &:lang(fa) {
+      font-size: $font-size-lg;
+      padding-right: $input-text-indent-lg;
+    }
+
+    &.light {
+      color: $light-theme-secondary-text-color;
+      background-color: $light-theme-primary-light-background-color;
+
+      &:focus {
+        color: $light-theme-primary-text-color;
+        background-color: $light-theme-primary-lighter-background-color;
+      }
+    }
+
+    &.dark {
+      color: $dark-theme-secondary-text-color;
+      background-color: $dark-theme-primary-darker-background-color;
+
+      &:focus {
+        color: $dark-theme-primary-text-color;
+        background-color: $dark-theme-primary-dark-background-color;
+      }
+    }
+
+    &.invalid {
+      outline: 2px solid $secondary-background-color;
+      animation: shake 0.5s forwards;
+      -webkit-animation: shake 0.5s forwards;
+    }
+  }
+
+  button {
+    font-family: inherit;
+    font-size: $font-size-md;
+    width: 20%;
+    height: $element-height;
+    border: none;
+    border-radius: $element-border-radius;
+    font-size: $font-size-md;
+    opacity: 1;
+    cursor: pointer;
+    background-color: $secondary-background-color;
+    transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    -webkit-border-radius: $element-border-radius;
+    -moz-border-radius: $element-border-radius;
+    -ms-border-radius: $element-border-radius;
+    -o-border-radius: $element-border-radius;
+
+    &.light {
+      color: $light-theme-primary-text-color;
+
+      &:hover {
+        box-shadow: 0 1px 8px $light-theme-shadow-color;
+      }
+    }
+
+    &.dark {
+      color: $dark-theme-primary-text-color;
+
+      &:hover {
+        box-shadow: 0 1px 8px $dark-theme-shadow-color;
+      }
+    }
+
+    &::first-letter {
+      font-family: "Poppins-bold";
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .add-task {
+    flex-direction: column;
+
+    button,
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .add-task {
+    padding: $element-padding-sm;
+
+    input {
+      padding-left: $input-text-indent-md;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+@import "../asset/styles/animations";
+
+.spinner-outer {
+  width: $outer-loading-spinner-size;
+  height: $outer-loading-spinner-size;
+  border: 3px dashed $secondary-background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation: outer 1s infinite;
+}
+
+.spinner-inner {
+  width: $inner-loading-spinner-size;
+  height: $inner-loading-spinner-size;
+  border: 3px dashed $secondary-background-color;
+  border-radius: 50%;
+  animation: inner 1s infinite;
+}

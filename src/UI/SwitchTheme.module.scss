@@ -1,0 +1,26 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+@import "../asset/styles/mixins";
+@import "../asset/styles/placeholders";
+
+.theme-btn {
+  @extend %menuItems;
+
+  &.open {
+    @include menuItemTransion(0, -80px);
+  }
+
+  &.light {
+    color: $dark-theme-menu-icon-color;
+    background-color: $dark-theme-button-color;
+    filter: drop-shadow(0 0 15px $dark-theme-button-color);
+    -webkit-filter: drop-shadow(0 0 15px $dark-theme-button-color);
+  }
+
+  &.dark {
+    color: $light-theme-menu-icon-color;
+    background-color: rgb(245, 245, 245);
+    filter: drop-shadow(0 0 15px $light-theme-button-color);
+    -webkit-filter: drop-shadow(0 0 15px $light-theme-button-color);
+  }
+}

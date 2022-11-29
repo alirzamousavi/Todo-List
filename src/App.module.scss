@@ -1,0 +1,30 @@
+@import "./asset/styles/colors";
+@import "./asset/styles/variables";
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 15%;
+
+  &:not(:lang(fa)) {
+    direction: ltr;
+    font-family: "Poppins-light", "Segoe UI", "Roboto", "Oxygen", sans-serif;
+  }
+
+  &:lang(fa) {
+    direction: rtl;
+    font-family: "Vazir", "b nazanin", arial;
+  }
+
+  @media (max-width: 450px) {
+    padding: 10px 10%;
+  }
+
+  &.light {
+    background-color: $light-theme-primary-lightest-background-color;
+  }
+
+  &.dark {
+    background-color: $dark-theme-primary-darkest-background-color;
+  }
+}

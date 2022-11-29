@@ -1,7 +1,0 @@
-h1 {
-  font-family: 'Nunito';
-  font-size: var(--font-size-xlg);
-  color: var(--primary-text-color);
-  text-align: center;
-  user-select: none;
-}

@@ -1,0 +1,36 @@
+@import "../asset/styles/colors";
+@import "../asset/styles/variables";
+
+.tasks-list {
+  width: 100%;
+  height: fit-content;
+  padding: $element-padding-lg;
+  padding-top: 0;
+
+  @media (max-width: 380px) {
+    padding: $element-padding-sm;
+    padding-top: 0;
+  }
+
+  &.light {
+    border-bottom: 2px solid $light-theme-seperator-color;
+
+    .message {
+      color: $light-theme-primary-text-color;
+    }
+  }
+
+  &.dark {
+    border-bottom: 2px solid $dark-theme-seperator-color;
+
+    .message {
+      color: $dark-theme-primary-text-color;
+    }
+  }
+
+  .message {
+    text-align: center;
+    font-size: $font-size-lg;
+    user-select: none;
+  }
+}

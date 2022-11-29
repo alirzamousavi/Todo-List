@@ -1,0 +1,21 @@
+@import "/src/asset/styles/colors";
+@import "/src/asset/styles/variables";
+
+.box {
+  min-height: $element-height;
+  border: none;
+  border-radius: $element-border-radius;
+  font-size: $font-size-md;
+  -webkit-border-radius: $element-border-radius;
+  -moz-border-radius: $element-border-radius;
+  -ms-border-radius: $element-border-radius;
+  -o-border-radius: $element-border-radius;
+
+  @media (max-width: 380px) {
+    font-size: $font-size-sm;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
